@@ -1,3 +1,3 @@
-# UI developement projects.
+# UI developement Stuffs.
 
 ## Using HTML, CSS, jQuery, JavaScript
