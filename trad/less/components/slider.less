@@ -1,0 +1,46 @@
+.orbit-figure {
+	background: linear-gradient(to right, #151C24, rgba(21, 28, 36, 1));
+}
+.orbit{
+	@media only screen and (max-width:1024px){
+		margin-bottom: 20px;
+	}
+}
+
+.orbit-caption {
+	position: absolute;
+	max-width: 294px;
+	left: 30px;
+	bottom: 34px;
+	background: transparent;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 18px;
+	text-align: left;
+	line-height: 39px;
+	padding: 0;
+	p {
+		margin: 0;
+	}
+	.quote {
+		margin-bottom: 0;
+		font-size: 96px;
+		line-height: 9px;
+		opacity: 0.15;
+	}
+	@media only screen and (max-width:550px){
+		font-size: 14px;
+		.quote {
+			font-size: 56px;
+		}
+	}
+	@media only screen and (max-width:320px){
+		font-size: 12px;
+		left: 10px;
+		bottom: 14px;
+		top: 20px;
+		.quote {
+			font-size: 46px;
+		}
+	}
+}

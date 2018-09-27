@@ -1,0 +1,33 @@
+.ini {
+	margin-bottom: -140px;
+	&__single {
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	&__content {
+		padding: 85px 45px 65px;
+		&:after {
+			content: ' ';
+			display: table;
+			clear: both;
+		}
+	}
+	&__title {
+		color: #fff;
+		@media only screen and (max-width:385px){
+			font-size: 17px;
+		}
+	}
+	&__desc {
+		color: #fff;
+		font-size: 14px;
+		line-height: 1.7;
+		max-width: 440px;
+		margin-bottom: 45px;
+		margin-top: 25px;
+	}
+	&__btn {
+		float: right;
+	}
+}

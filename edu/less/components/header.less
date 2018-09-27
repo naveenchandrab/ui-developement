@@ -1,0 +1,95 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    color: #fff;
+    padding-top: 24px;
+    transition: all .7s;
+    
+    &--inner{
+        // position: relative;
+        background-color: rgba(19,22,40,1);
+    }
+    &__top{
+        margin-bottom: 10px;
+    }
+    &__btm{
+        padding-bottom: 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+    }
+    &__wrap{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    &__blue{
+        background-color: rgba(19,22,40,1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+    }
+
+    @keyframes scale-display {
+        0% {
+            opacity: 0;
+            transform: scale(0);
+            -webkit-transform: scale(0);
+        }
+    
+        100% {
+            opacity: 1;
+            transform: scale(1);
+            -webkit-transform: scale(1);
+        }
+    }
+    @keyframes scale-display--reversed {
+        0% {
+            display: inline-flex;
+            opacity: 1;
+            transform: scale(1);
+            -webkit-transform: scale(1);
+        }
+        99% {
+            display: inline-flex;
+            opacity: 0;
+            transform: scale(0);
+            -webkit-transform: scale(0);
+        }
+        100% {
+            display: none;
+            opacity: 0;
+            transform: scale(0);
+            -webkit-transform: scale(0);
+        }
+    }
+    @media (min-width:960px){
+        &__movetop{
+            top: -110px;
+            background-color: rgba(19,22,40,1);
+        }
+        &__movebtm{
+            top: 0;
+        }
+        &__show{
+            animation: scale-display .3s;
+        }
+        &__hide{
+            animation: scale-display--reversed .5s;
+            animation-fill-mode:forwards;
+        }
+    }
+    @media (max-width:960px){
+        position: relative;
+        background-color: rgba(19,22,40,1);
+    }
+    @media (max-width:960px){
+        &__wrap{
+            align-items: center;
+            flex-direction: column-reverse;
+        }
+    }
+}

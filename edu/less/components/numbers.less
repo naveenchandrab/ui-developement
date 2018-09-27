@@ -1,0 +1,92 @@
+.numbers{
+        margin-bottom: 62px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 349px;
+    &__bg{
+        background: rgba(19, 22, 40, .7);
+        max-height: 100%;
+        padding: 73px 0 77px 0;
+    }
+    &__title{
+        font-weight: bold;
+        line-height: 50px;
+        font-size: 48px;
+        color: #FFFFFF;
+        max-width: 328px;
+        position: relative;
+        padding-top: 25px;
+        margin-top: 80px;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 90px;
+            height: 4px;
+            background-color: @secondary;
+            top: 0;
+            left: 0;
+        }
+    }
+    &__wrap{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    &__single{
+
+    }
+    &__no{
+        font-size: 48px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FF7008;
+    }
+    &__txt{
+        font-size: 12px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #fff;
+    }
+    @media (max-width:960px){
+        
+    }
+    @media (max-width:780px){
+        &__title{
+            font-size: 32px;
+        }
+    }
+    @media (max-width:600px){
+        &__title{
+            text-align: center;
+            margin-top: 0;
+            padding-bottom: 26px;
+            padding-top: 0;
+            margin-bottom: 50px;
+            max-width: none;
+            &::before{
+                top: auto;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                display: block;
+                margin: auto;
+            }
+        }
+        &__bg{
+            padding: 50px 0 50px 0;
+        }
+    }
+    @media (max-width:460px){
+        &__wrap{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @media (max-width:370px){
+        &__no{
+            font-size: 32px;
+        }
+    }
+}

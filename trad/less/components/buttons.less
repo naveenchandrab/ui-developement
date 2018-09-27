@@ -1,0 +1,61 @@
+.button {
+	border-radius: 0;
+	padding: 14px 57px;
+	font-family: @font-button;
+	font-weight: bold;
+	&.primary {
+		border-radius: 0;
+		background-color: @secondary;
+		color: #fff;
+		&:hover {
+			background-color: @primary;
+			color: #000;
+		}
+	}
+	&.secondary {
+		background-color: #fff;
+		color: #000;
+		&:hover {
+			background-color: @secondary;
+			color: #fff;
+		}
+	}
+	&.tertiary {
+		background-color: #fff;
+		color: @secondary;
+		border: 1px solid @secondary;
+		&:hover {
+			background-color: @secondary;
+			color: #fff;
+		}
+		@media only screen and (max-width:375px){
+			padding-left: 22px;
+			padding-right: 22px;
+		}
+	}
+}
+
+.input-btn{
+	padding: 0;
+	background: transparent;
+    padding-right: 6px;
+	&:hover{
+		background: transparent;
+	}
+	&:visited{
+		background: transparent;
+	}
+}
+.footer__desc input[type=email] {
+	background: #333;
+    border: none;
+    border-radius: 20px;
+    margin-left: 20px;
+	color: #fff;
+	&:focus{
+		background: #333;
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
+	}
+}

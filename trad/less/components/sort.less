@@ -1,0 +1,25 @@
+.sort{
+    margin-left: auto;
+    display: flex;
+    @media (max-width:740px){
+        flex-direction: column;
+    }
+    @media (max-width:1024px){
+        margin-left: 0;
+    }
+    &__single{
+        color: #828282;
+        font-weight: bold;
+        border-bottom: 3px solid transparent;
+        padding: 10px;
+        margin-right: 4px;
+        &:hover, &:active{
+            color: @secondary;
+            border-bottom-color: @secondary;
+        }
+        &--active{
+            color: @secondary;
+            border-bottom-color: @secondary;
+        }
+    }
+}

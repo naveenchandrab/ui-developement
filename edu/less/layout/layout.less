@@ -1,0 +1,32 @@
+.container {
+	max-width: 1051px;
+    margin: 0 auto;
+    &::after {
+        content: '';
+        clear: both;
+        display: table
+    }
+}
+.row{
+    max-width: none;
+}
+body{
+    font-family: @font-primary;
+    font-size: 13px;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: @font-primary;
+}
+a{
+    transition: all .3s;
+}
+
+.space-15{
+    height: 15px;
+}
+.space-25{
+    height: 25px;
+}
+.space-50{
+    height: 50px;
+}

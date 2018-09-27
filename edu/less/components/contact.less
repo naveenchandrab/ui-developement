@@ -1,0 +1,38 @@
+.contact{
+    float: right;
+    &__email{
+
+    }
+    &__phone{
+
+    }
+    @media (max-width:960px){
+        float: none;
+        text-align: center;
+    }
+    @media (max-width:1024px) and (min-width:960px){
+        text-align: right;
+        &__email{
+            display: block;
+            margin-bottom: 12px;
+        }
+        &__phone{
+            display: block;
+        }
+        .sep{
+            display: none;
+        }
+    }
+    @media (max-width:420px){
+        &__email{
+            display: block;
+            margin-bottom: 12px;
+        }
+        &__phone{
+            display: block;
+        }
+        .sep{
+            display: none;
+        }
+    }
+}

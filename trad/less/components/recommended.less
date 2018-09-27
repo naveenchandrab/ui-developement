@@ -1,0 +1,46 @@
+.recommended{
+    background-color: @primary;
+    padding: 30px 0;
+    &__head{
+        color: #fff;
+    }
+    &__single{
+        background-color: #fff;
+        opacity: .7;
+        padding: 20px;
+        margin: 15px;
+        min-height: 255px;
+    }
+    &__title{
+        color: #000;
+        background-color: #EB9A00;
+        margin: 15px;
+        // min-height: 245px;
+        min-height: 238px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .owl-item.active &__single{
+        opacity: 1;
+    }
+    @media (min-width: 1151px) {
+		.owl-carousel .owl-stage-outer {
+			overflow: visible;
+		}
+    }
+    .owl-theme .owl-nav{
+        position: relative;
+        top: -175px;
+    }
+    .owl-next{
+        float: right;
+    }
+    .owl-prev{
+        float: left;
+    }
+    .owl-theme .owl-next, .owl-theme .owl-prev{
+        background:#fff;
+    }
+}

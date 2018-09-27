@@ -1,0 +1,50 @@
+.lang-sel {
+	float: right;
+	position: relative;
+	z-index: 99;
+	&__wrap {
+		display: none;
+		position: absolute;
+		right: 0;
+		top: 100%;
+		width: 100px;
+		background: #fff;
+		box-shadow: 0 0 25px rgba(0,0,0,0.2);
+	}
+	&__main, &__single {
+		margin-bottom: 0;
+		font-family: sans-serif;
+		font-size: 11px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		padding-left: 10px;
+		padding-right: 10px;
+		display: block;
+		margin: 0 auto;
+		&.clear {
+			color: @text-light;
+		}
+	}
+	&--opened {
+		display: block;
+	}
+	&__main {
+		float: right;
+	}
+	&__single {
+		&.clear {
+			color: @secondary;
+		}
+	}
+	&--active {
+		font-weight: bold;
+		&.clear {
+			color: @text-black;
+		}
+	}
+	@media (max-width: 1080px) {
+		position: absolute;
+		right: 15px;
+		bottom: -50px;
+	}
+}

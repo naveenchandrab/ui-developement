@@ -1,0 +1,71 @@
+.fourboxes {
+	margin-top: 25px;
+	margin-bottom: 50px;
+	&__single {
+		display: flex;
+		background: #fff;
+		&:first-child {
+			border-radius: 5px 5px 0 0;
+		}
+		&:last-child {
+			border-radius: 0 0 5px 5px;
+		}
+	}
+	&--right {
+		background: @primary;
+		&:after {
+			content: ' ';
+			display: table;
+			clear: both;
+		}
+	}
+	&__image {
+		width: 50%;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	&__content {
+		width: 50%;
+		padding: 45px;
+	}
+	&__title {
+		color: @text-black;
+	}
+	&__desc {
+		color: @text-dark;
+		font-size: 14px;
+		margin-top: 25px;
+		margin-bottom: 45px;
+	}
+	&--right &__btn {
+		float: right;
+	}
+
+	@media (max-width: 767px) {
+		&__single {
+			flex-direction: column;
+			margin-bottom: 25px;
+			border-radius: 5px;
+			&:first-child {
+				border-radius: 5px;
+			}
+		}
+		&__image {
+			order: 0;
+			width: 100%;
+			height: 180px;
+		}
+		&__content {
+			order: 1;
+			width: 100%;
+			padding: 25px;
+			&_first-child {
+				border-radius: 5px;
+			}
+		}
+		&__btn {
+			float: right;
+		}
+	}
+}

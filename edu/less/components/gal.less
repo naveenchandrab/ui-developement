@@ -1,0 +1,41 @@
+.gal{
+    background-color: @primary;
+    padding: 52px 0;
+    text-align: center;
+    &__heading{
+        color: #fff;
+    }
+    &__wrap{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-column-gap: 30px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    &__single{
+        overflow: hidden;
+        &:hover{
+            .gal__img{
+                transform: scale(1.1);
+            }
+        }
+    }
+    &__img{
+        transition: all .5s;
+    }
+    &__btn{
+        margin-top: 59px;
+        background-color: transparent !important;
+        color: @secondary !important;
+        &:hover{
+            color: #fff !important;
+            border: 1px solid #fff !important;
+        }
+    }
+    @media(max-width:600px){
+        &__wrap{
+            grid-template-columns: repeat(2, 1fr);
+            grid-row-gap: 30px;
+        }
+    }
+}

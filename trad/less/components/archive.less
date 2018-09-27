@@ -1,0 +1,42 @@
+.archieve {
+	&__image{
+        float: left;
+        margin-right: 20px;
+        @media(max-width:520px){
+            float: none;
+            display: block;
+            margin: 0 auto 20px auto;
+        }
+	}
+	&__single {
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 9px 20px 4px rgba(0,0,0,0.1);
+        margin-bottom: 20px;
+	}
+	&__title {
+		margin-bottom: 20px;
+		h3 {
+			&::after {
+				content: ' ';
+				position: absolute;
+				top: 0;
+				left: 0;
+				border-bottom: 3px solid #FAB01A;
+			}
+		}
+		&--inner {
+			font-size: 20px;
+			color: @primary;
+			&:hover {
+				color: @secondary;
+			}
+		}
+	}
+	&__desc {
+		font-size: 14px;
+	}
+	&__date {
+		color: #939393;
+	}
+}

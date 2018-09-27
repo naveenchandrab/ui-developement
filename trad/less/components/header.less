@@ -1,0 +1,137 @@
+.header {
+	position: relative;
+	z-index: 99;
+	&__left {
+		width: 15%;
+		float: left;
+	}
+	&__right {
+		width: 85%;
+		float: right;
+	}
+	&__top {
+		border-bottom: 1px solid @grey-light;
+		padding: 28px 0 0;
+	}
+	.logo {
+		display: block;
+		border-radius: 50%;
+		width: 175px;
+		height: 175px;
+		text-align: center;
+		background: #fff;
+		padding-top: 25px;
+		margin-bottom: -40px;
+		margin-left: -24px;
+	}
+	@media (max-width: 1080px) {
+		&__left, &__right {
+			width: 100%;
+			float: none;
+		}
+		&__top {
+			text-align: center;
+			padding-top: 8px;
+			position: relative;
+		}
+		.logo {
+			margin: 0 auto;
+			width: auto;
+			height: auto;
+		}
+	}
+}
+.site-name {
+	font-size: 24px;
+	font-family: @font-button;
+	font-style: normal;
+	font-weight: normal;
+	color: @secondary;
+	small {
+		margin-left: 8px;
+		font-family: @font;
+		font-size: 13px;
+		font-style: italic;
+		color: @primary;
+	}
+	@media (max-width: 1080px) {
+		margin-bottom: 15px;
+		small {
+			display: block;
+			margin-left: 0;
+			line-height: 1;
+		}
+	}
+}
+
+
+// foundation responsive menu customisation
+.navi {
+	font-family: @font-button;
+	font-size: 14px;
+	padding: 0;
+	position: relative;
+	&__wrap {
+		list-style-type: none;
+		margin: 0;
+		display: none;
+		&:after {
+			content: ' ';
+			display: table;
+			clear: both;
+		}
+	}
+	li {
+		float: left;
+		position: relative;
+	}
+	a {
+		display: block;
+		color: @text-black;
+		padding: 20px 15px;
+		&:hover {
+			color: @primary;
+		}
+	}
+	@media (min-width: 1079px) {
+		& &__toggle {
+			display: none;
+		}
+		&__wrap {
+			display: block;
+		}
+		&__wrap > li:first-child a {
+			padding-left: 0;
+		}
+		.vertical {
+			display: none;
+			position: absolute;
+			left: 0;
+			top: 100%;
+			width: 180px;
+			background: #fff;
+			box-shadow: 0 0 25px rgba(0,0,0,0.2);
+			a {
+				border-bottom: 1px solid @grey-light;
+			}
+		}
+		li:hover ul {
+			display: block;
+		}
+	}
+	@media (max-width: 1080px) {
+		li {
+			float: none;
+			left: 20px;
+		}
+	}
+	&--opened {
+		display: block;
+		position: absolute;
+		box-shadow: 0 0 25px rgba(0,0,0,0.2);
+		background: #fff;
+		top: 100%;
+		left: 0;
+		right: 0;
+	}
+}

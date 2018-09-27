@@ -1,0 +1,62 @@
+.buttons{
+    margin-bottom: 62px;
+    &__wrap{
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+    }
+    &__single{
+        padding: 45px 20px;
+        background-color: @secondary;
+        color: #fff;
+        min-width: 204px;
+        text-align: center;
+        &:hover, &:focus{
+            color: #fff;
+            background-color: @primary;
+            .buttons__img{
+                animation: none;
+                transform: scale(1.2) scale(1);
+            }
+        }
+    }
+    &__img{
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 8px;
+        transition: all .6s;
+        &--animate{
+            animation-name: rotate;
+        }
+    }
+    &__txt{
+        font-weight: bold;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    @media (max-width:960px){
+        &__single{
+            padding: 30px 45px;
+        }   
+        &__txt{
+            font-size: 14px;
+        }
+    }
+    @media (max-width:812px){
+        &__wrap{
+            flex-direction: column;
+            text-align: center;
+        }
+        &__txt{
+            font-size: 18px;
+        }
+    }
+    @keyframes rotate {
+        from{
+            transform: rotateY(0);
+        }
+        to{
+            transform: rotateY(360deg);
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.breadcrumbs{
+//	margin:0;
+	a {
+		color: #000;
+		&:hover{
+			color: #828282;
+			text-decoration: none;
+		}
+	}
+	li {
+		font-size: 11px;
+		&:last-child {
+			a {
+				opacity: .6;
+			}
+		}
+	}
+	li:not(:last-child)::after{
+		content: '>';
+		color: #000;
+	}
+}

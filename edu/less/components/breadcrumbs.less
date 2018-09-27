@@ -1,0 +1,28 @@
+.breadcrumbs{
+    font-size: 12px;
+    margin-bottom: 25px;
+    a{
+        color: @primary;
+        font-size: 12px;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+    li:last-child a{
+        font-style: italic;
+        font-weight: normal;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    li:not(:last-child)::after{
+        color: @primary;
+    }
+    .sep{
+        margin: 0 0.75rem;
+    }
+}
+
+.current{
+    font-style: italic;
+    font-weight: normal;
+}

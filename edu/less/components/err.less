@@ -1,0 +1,40 @@
+.err{
+    padding: 80px 0;
+    text-align: center;
+    margin-top: 210px;
+    &__center{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (max-width:510px) {
+            flex-direction: column-reverse;
+        }
+    }
+    &__number{
+        animation-delay: 2s;
+    }
+    &__desc{
+        font-size: 24px;
+        @media (max-width:400px){
+            font-size: 20px;
+        }
+    }
+    &__highlight{
+        font-size: 160px;
+        font-weight: bold;
+        color: @primary;
+        margin-right: 20px;
+        text-shadow: 0px 10px 12px #c5c5c5;
+        @media (max-width:400px){
+            font-size: 90px;
+        }
+    }
+    &__emoji{
+        animation-name: bounceIn, bounce;
+        animation-delay: 2s, 2.5s;
+    }
+    &__strip{
+        background: @secondary;
+        height: 15px;
+    }
+}
